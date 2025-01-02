@@ -1,4 +1,4 @@
 #!/bin/bash
 
 output=$(date)
-echo "today's date is : $output
+echo "today's date is : $output"
