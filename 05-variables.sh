@@ -2,7 +2,7 @@
 
 echo "enter the username"
 
-read  USERNAME 
+read  USERNAME #read command interupts and takes input into variabe
 
 echo  "entered username is $USERNAME"
 
