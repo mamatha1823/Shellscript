@@ -6,4 +6,4 @@ echo "script name : $0"
 echo "working  directory : $PWD"
 echo "pid of the script executing now: $$"
 echo "home dir of current user: $HOME"
-echo "pid of last background process: $!
+echo "pid of last background process: $!"
