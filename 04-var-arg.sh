@@ -1,6 +1,6 @@
 #!/bin/bash
-P1=A
-P2=B
+P1=$1
+P2=$2
 
 echo "Hi $P1"
 echo "Hi $P2"
