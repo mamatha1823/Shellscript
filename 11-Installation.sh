@@ -7,4 +7,11 @@ then
     echo "please try with root id"
     exit 1
 fi
-dnf install mysql -y 
+dnf list installed  mysql 
+if ( $? -ne 0 )
+then 
+  echo "sql is not installed going to install it "
+  dnf install mysql -y
+else
+   echo "sql is already installed "
+fi
