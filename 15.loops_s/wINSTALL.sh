@@ -3,12 +3,11 @@ USER_ID=$(id -u)
 R="\e[31m"
 G="\e[32m"
 N="\e[0m"
-package=$P
 
 Check_root(){
 if [ $USER_ID -ne 0]
 then
- echo -e " $R please run with root it $N"
+ echo -e " $R please run with root it $N" 
  exit 1
 fi
 }
