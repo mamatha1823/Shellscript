@@ -27,12 +27,12 @@ fi
 
 Check_root
 
-dnf list installed git
+dnf listttt installed gitttt
 
-if [ $? -ne 0]
+if [ $? -ne 0 ]
 then 
   echo -e "$R git is not installated $N"
-  dnf install git -y
+  dnf install git 
   Validate $? "git instalation is"
 else
   echo -e "$G git is already INSTALLED $N"
