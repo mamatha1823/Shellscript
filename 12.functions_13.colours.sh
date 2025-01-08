@@ -7,7 +7,7 @@
  N="\e[0m"
  G="\e[32m"
 
- Check_root(){
+Check_root(){
 if [ $user_id -ne 0 ]
 then
  echo -e "please run with root access"
@@ -20,7 +20,7 @@ fi
     then 
       echo -e "$R  $2  failed, please check $N "
       exit 1
-     else
+    else
       echo -e "$G $2   is success $N "
     fi 
     }

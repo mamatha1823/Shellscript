@@ -2,5 +2,5 @@
 
 Fruits=("apple" "banana" "Melon")
 
-echo "1st fruit is: ${Fruits[0]}"
-echo "all fruits name are $Fruits[@] "  
+echo "1st fruit is: $Fruits[0]"
+echo "all fruits name are ${Fruits[@]} "  
