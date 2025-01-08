@@ -30,10 +30,10 @@ then
    dnf install git -y
    if [ $? ne 0 ]
    then 
-     echo "git is successfully installed"
-   else
      echo "git installation failed,please check"
      exit 1
+   else
+     echo "git is successfully installed"
    fi
 else
    echo "Already Git is installated"
