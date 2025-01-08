@@ -28,6 +28,8 @@ then
   echo -e "$R git is not installated $N"
   dnf install git -y
   Validate $? "git instalation is"
+else
+  echo -e "$G git is already INSTALLED $N"
 fi
 
 dnf list installed mysql 
@@ -36,4 +38,6 @@ then
  echo -e "$R mysql is not installed $N"
  dnf install git -y
  Validate $? "mysql installation"
+else
+ echo -e "$G git is already INSTALLED $N"
 fi
