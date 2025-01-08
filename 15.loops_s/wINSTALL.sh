@@ -18,7 +18,7 @@ then
     echo - e" $R $2 is FAILED$N" 
 else
     echo -e " $G $2 is success $N"
- }
+}
 
 Check_root
 
