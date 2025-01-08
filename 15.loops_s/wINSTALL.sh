@@ -24,7 +24,7 @@ fi
 
 Check_root
 
-for $package in $@
+for package in $@
 do
  dnf  list installed $package
  if [ $? -ne 0 ]
