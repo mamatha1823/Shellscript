@@ -6,11 +6,11 @@
  Validate(){
     if [ $1 -ne 0 ]
     then 
-      echo -e "$R  $2 installation failed, please check "
+      echo -e "$R  $2  failed, please check "
       exit 1
      else
-      echo -e "$G $2 INSTALLATION  is success, please check "
+      echo -e "$G $2   is success "
     fi 
     }
 dnf list installed git
-Validate $? git
+Validate $? "listing git"
