@@ -15,7 +15,7 @@
      else
       echo -e "$G $2 INSTALLATION  is success, please check "
      fi
-
- }
+    fi 
+    }
 dnf installed list $V
 Validate $? $V
