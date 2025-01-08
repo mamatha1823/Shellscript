@@ -3,9 +3,9 @@
  user_id=$(id -u)
  #V=$variables
 
- R="\e[31m
- N="\e[0m
- G="\e[32m
+ R="\e[31m"
+ N="\e[0m"
+ G="\e[32m"
 
  Check_root(){
 if [ $user_id -ne 0 ]
@@ -27,24 +27,24 @@ fi
 
 Check_root
 
-# dnf list installed git
+dnf list installed git
 
-# if [ $? -ne 0]
-# then 
-#   echo -e "$R git is not installated $N"
-#   dnf install git -y
-#   Validate $? "git instalation is"
-# else
-#   echo -e "$G git is already INSTALLED $N"
-# fi
+if [ $? -ne 0]
+then 
+  echo -e "$R git is not installated $N"
+  dnf install git -y
+  Validate $? "git instalation is"
+else
+  echo -e "$G git is already INSTALLED $N"
+fi
 
-# dnf list installed mysql 
+dnf list installed mysql 
 
-# if [ $? -ne 0 ]
-# then 
-#  echo -e "$R mysql is not installed $N"
-#  dnf install git -y
-#  Validate $? "mysql installation"
-# else
-#  echo -e " $G git is already INSTALLED $N "
-# fi
+if [ $? -ne 0 ]
+then 
+ echo -e "$R mysql is not installed $N"
+ dnf install git -y
+ Validate $? "mysql installation"
+else
+ echo -e " $G git is already INSTALLED $N "
+fi
