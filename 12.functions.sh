@@ -17,5 +17,5 @@
      fi
     fi 
     }
-dnf installed list $V
+dnf list installed  $V
 Validate $? $V
