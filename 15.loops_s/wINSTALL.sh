@@ -32,5 +32,7 @@ do
    echo  -e " $R $package is not installed ,going to install  $N"
    dnf install $package -y
    Validate $? "Installing $package"
+ else
+   echo "already $package is installed"
  fi
 done
