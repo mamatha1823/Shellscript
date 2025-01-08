@@ -10,23 +10,23 @@ Y="\e[33m"
 
 if [ $USER_ID -ne 0 ]
 then 
-    echo "$R please try with root id $N"
+    echo -e "$R please try with root id $N"
     exit 1
 fi
 dnf list installed  mysql 
 if [ $? -ne 0 ]
 then 
-  echo "$R sql is not installed ,pls  install it $N"
+  echo -e "$R sql is not installed ,pls  install it $N"
   dnf install mysql -y
   if [ $? -ne 0 ]
   then 
-   echo " sql is installation is failed"
+   echo -e "$R sql is installation is failed $N"
    exit 1;
   else
-   echo "$G sql is successfully installed $N"
+   echo  -e "$G sql is successfully installed $N"
   fi
 else
-   echo "$G sql is already installed $N"
+   echo  -e "$G sql is already installed $N"
 fi
 
 dnf list installed git -y
