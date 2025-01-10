@@ -24,8 +24,10 @@ check_root
 
 Usage(){
     if [ $# -eq 0 ]
-    echo -e "$R usage is  package1, package2....$N"
-    exit 1
+    then
+     echo -e "$R usage is  package1, package2....$N"
+     exit 1
+    fi
 }
 
 Usage
