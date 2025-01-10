@@ -28,6 +28,8 @@ Usage(){
     exit 1
 }
 
+Usage
+
 Validate(){
     if [ $1 -ne 0 ]
     then 
