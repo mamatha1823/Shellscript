@@ -22,6 +22,12 @@ check_root(){
 
 check_root
 
+Usage(){
+    if [ $# -eq 0 ]
+    echo -e "$R usage is  package1, package2....$N"
+    exit 1
+}
+
 Validate(){
     if [ $1 -ne 0 ]
     then 
