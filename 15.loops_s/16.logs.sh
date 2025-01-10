@@ -15,7 +15,7 @@ N="\e[0m"
 check_root(){
    if [ $USER_ID -ne 0 ]
    then
-     echo -e " $R please switch to root ID  to proceed $N" &>>log_file
+     echo -e " $R please switch to root ID  to proceed $N" &>>$log_file
      exit 1
    fi
 }
@@ -25,10 +25,10 @@ check_root
 Validate(){
     if [ $1 -ne 0 ]
     then 
-      echo -e "$R $2... is Failed $N" &>>log_file
+      echo -e "$R $2... is Failed $N" &>>$log_file
       exit 1
     else
-      echo -e "$G  $2.. IS Success $N" &>>log_file
+      echo -e "$G  $2.. IS Success $N" &>>$log_file
     fi
 }
 
@@ -38,11 +38,11 @@ do
   dnf list installed $package
   if [ $? -ne 0 ]
   then 
-     echo -e "$R $package is not installed, going to install $N" &>>log_file
+     echo -e "$R $package is not installed, going to install $N" &>>$log_file
      dnf install $package
      Validate $? "$package installation"
   else
-     echo -e "$G $package is already installed, nothing to do $N" &>>log_file
+     echo -e "$G $package is already installed, nothing to do $N" &>>$log_file
   fi
 done
 
