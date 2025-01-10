@@ -22,12 +22,6 @@ check_root(){
 
 check_root
 
-Usage(){
-     echo -e "$R usage is  package1, package2....$N"   | tee -a $log_file
- 
-}
-
-
 Validate(){
     if [ $1 -ne 0 ]
     then 
@@ -39,6 +33,14 @@ Validate(){
 }
 
 
+Usage(){
+     echo -e "$R usage is  package1, package2....$N"   | tee -a $log_file
+ 
+}
+
+
+echo -e " Script started executing at $G $(date)"
+
 if [ $# -eq 0 ]
 then
  Usage
@@ -49,7 +51,7 @@ do
   dnf list installed $package
   if [ $? -ne 0 ]
   then 
-     echo -e "$R $package is not installed, going to install $N" |tee -a $log_file
+     #echo -e "$R $package is not installed, going to install $N" |tee -a $log_file
      dnf install $package
      Validate $? "$package installation"
   else
