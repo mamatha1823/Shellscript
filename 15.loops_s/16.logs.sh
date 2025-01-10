@@ -13,7 +13,7 @@ G="\e[32m"
 N="\e[0m"
 
 check_root(){
-   if [$USER_ID -ne 0 ]
+   if [ $USER_ID -ne 0 ]
    then
      echo -e " $R please switch to root ID  to proceed $N" &>>log_file
      exit 1
@@ -23,7 +23,7 @@ check_root(){
 check_root
 
 Validate(){
-    if [ $1 -ne 0]
+    if [ $1 -ne 0 ]
     then 
       echo -e "$R $2... is Failed $N" &>>log_file
       exit 1
