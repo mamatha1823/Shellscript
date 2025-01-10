@@ -1,5 +1,5 @@
 #!/bin/bash
-USER_ID-$(id -u)
+USER_ID=$(id -u)
 Log_folder="/var/log/shell-script"
 script_name=$(echo $0 | cut -d '.' -f1)
 time=%Y-%m-%d-%H-%M-%S
@@ -17,6 +17,7 @@ check_root(){
    then
      echo -e " $R please switch to root ID  to proceed $N" &>>log_file
      exit 1
+   fi
 }
 
 check_root
@@ -28,6 +29,7 @@ Validate(){
       exit 1
     else
       echo -e "$G  $2.. IS Success $N" &>>log_file
+    fi
 }
 
 
