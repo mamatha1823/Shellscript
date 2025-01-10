@@ -1,7 +1,7 @@
 #!/bin/bash
 USER_ID=$(id -u)
 Log_folder="/var/log/shell-script"
-script_name=$(echo $0 | cut -d '.' -f1)
+script_name=$(echo $0 | cut -d '.' -f2)
 time=$(date +%Y-%m-%d-%H-%M-%S)
 log_file="$Log_folder/$script_name-$time.log"
 mkdir -p $Log_folder
