@@ -18,4 +18,4 @@ read USERNAME
 echo "entered Username is  $USERNAME "
 echo "enter password"
 read -s PASSWORD
-echo "entered password is *********"
+echo "entered password is $PASSWORD\n$PASSWORD"
