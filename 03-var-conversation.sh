@@ -1,5 +1,5 @@
 #!/bin/bash 
-P1=hansi
+P1=Frooti
 P2=Riyan
 
 echo "Hi $P1, how are you"
