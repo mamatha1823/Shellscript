@@ -13,7 +13,7 @@ Y="\e[33m"
 N="\e[0m"
 
 Check_root(){
- if [ $user_id -ne 0]
+ if [ $user_id -ne 0 ]
  then 
     echo "run with root"
     exit 1
