@@ -1,10 +1,10 @@
 #!/bin/bash
 user_id=$(id -u)
 log_folder=/var/log/shell_script
-script_name=$(echo $0 | cut -d "." -f1)
+script_name=$(echo $0 | cut -d "." -f2)
 time=$(date +%y-%m-%d-%H-%M-%s)
 mkdir -p $log_folder
-Log_file=$log_folder/$script_name_$time.log
+Log_file=$log_folder/$script_name-$time.log
 #colours
 
 R="\e[31m]"
@@ -36,7 +36,7 @@ do
  if [ $? -ne 0 ]
  then
    echo $package
-   dnf install $package -y | &>> Log_file 
+   dnf install $package -y  &>> Log_file 
    Validate $? "Installing $package" 
  else
    echo  -e " $G $package already installed $N " &>>$Log_file
