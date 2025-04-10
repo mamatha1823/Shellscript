@@ -27,3 +27,4 @@ Check_root(){
     exit1
   fi
 }
+Check_root
