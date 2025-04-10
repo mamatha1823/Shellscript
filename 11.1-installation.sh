@@ -30,12 +30,12 @@ check_user
 
 for package in $@
 do 
-dnf list installed $package
-if [ $? -ne 0 ]
-then
- dnf install mysql -y
- Validate $? "Installing $package "
-else
- echo "$package already installed"
-fi
+ dnf list installed $package
+ if [ $? -ne 0 ]
+ then
+  dnf install mysql -y
+  Validate $? "Installing $package "
+ else
+  echo "$package already installed"
+ fi
 done
