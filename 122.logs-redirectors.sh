@@ -13,7 +13,7 @@ N="\e[0m]"
 check_user(){
     if [ $user_id -ne 0 ]
     then 
-     echo  -e "$R user is not having the root access, please check $N" &>>$ Log_file
+     echo  -e "$R user is not having the root access, please check $N" &>>$Log_file
     exit 1
     fi
 }
