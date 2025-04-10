@@ -1,9 +1,10 @@
 #!/bin/bash
 user_id=$(id -u)
-mkdir -p /var/log/shell_script
+log_folder=/var/log/shell_script
 script_name=$(echo $0 | cut -d "." -f1)
 time=$(date +%y-%m-%d-%H-%M-%s)
-Log_file=/var/log/shell_script/$script_name_$time.log
+mkdir -p $log_folder
+Log_file=$log_folder/$script_name_$time.log
 #colours
 
 R="\e[31m]"
@@ -21,10 +22,10 @@ check_user(){
 Validate(){
     if [ $1 -ne 0 ]
     then
-     echo -e " $ $R $2 is failed $N"  &>>$Log_file
+     echo -e " $R $2 is failed $N"  &>>$Log_file
      exit 1
     else
-     echo -e " $ $G $2 is Success $N" &>>$Log_file
+     echo -e " $G $2 is Success $N" &>>$Log_file
     fi
 }
 check_user
