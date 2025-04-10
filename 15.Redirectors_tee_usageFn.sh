@@ -23,8 +23,8 @@ Check_root(){
  Usage(){
   if [ $# eq 0 ]
   then 
-    echo -e " $R usage: $0 package1 package2 ...."
-    exit1
+    echo -e " $R usage: $0 package1 package2 ....$N"
+    exit 1
   fi
 }
 Check_root
