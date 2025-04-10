@@ -23,7 +23,7 @@ Check_root(){
  Usage(){
   if [ $# eq 0 ]
   then 
-    echo " usage is like { $0 package1 package2 ....} "
+    echo -e " $R usage: $0 package1 package2 ...."
     exit1
   fi
 }
