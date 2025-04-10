@@ -1,5 +1,8 @@
 #!/bin/bash
 user_id=$(id -u)
+mkdir -p /var/log/shell_script
+script_name=["$0 | cut -d "." -f1]
+Log_file=
 #colours
 
 R="\e[31m]"
@@ -25,11 +28,14 @@ Validate(){
 }
 check_user
 
-dnf list installed mysql
+for package in $@
+do 
+dnf list installed $package
 if [ $? -ne 0 ]
 then
  dnf install mysql -y
- Validate $? "Installing mysql"
+ Validate $? "Installing $package "
 else
- echo "Mysql already installed"
+ echo "$package already installed"
 fi
+done
