@@ -23,10 +23,10 @@ Check_root(){
 Usage(){
   if [ $# eq 0 ]
   then 
-    echo -e " $R usage: sudo sh $0 package1 package2 ....$N "
+    echo -e " $R usage: sudo sh $0 package1 package2 ....$N "  | tee -a $log_file
+    exit 1
   fi
 }
-
 
 Check_root
 Usage
