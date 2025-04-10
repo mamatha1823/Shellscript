@@ -15,7 +15,7 @@ check_user(){
 }
     
 Validate(){
-    if ($1 -ne 0)
+    if [$1 -ne 0]
     then
      echo -e " $ $R $2 is failed $N" 
      exit
@@ -26,7 +26,7 @@ Validate(){
 check_user
 
 dnf list installed mysql
-if ($? -ne 0)
+if [$? -ne 0]
 then
  dnf install mysql -y
  Validate $? "Installing mysql"
