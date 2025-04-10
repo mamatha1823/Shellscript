@@ -1,7 +1,6 @@
 #!/bin/bash
 dnf list installed -y
-
-dnf install no -y
+dnf install number  -y
 if [ $? -ne 0 ]
 then
  echo " installation success"
