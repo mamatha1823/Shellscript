@@ -4,7 +4,7 @@ Log_file=/var/log/shellscript
 mkdir -p Log_file
 time=$(date +%y-%m-%D-%H-%M-%s)
 script_name=$(echo "$0 | cut -d -name "*"
-log_file=$(Log_file/$script_name-$time.log )# format of the log file 
+log_file=$Log_file/$script_name-$time.log      # format of the log file 
 
 COLOURS ## for highlighting the statements
 R="\e[31m"
