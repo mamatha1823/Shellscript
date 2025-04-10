@@ -25,4 +25,4 @@ Check_root(){
   then 
     echo " usage is like { $0 package1 package2 ....} "
     exit1
-  done
+  fi
