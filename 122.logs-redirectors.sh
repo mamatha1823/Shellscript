@@ -29,8 +29,8 @@ Validate(){
 }
 check_user
 
-#for package in $@
-#do 
+for package in $@
+do 
  dnf list installed $package  | &>> Log_file
  if [ $? -ne 0 ]
  then
@@ -39,4 +39,4 @@ check_user
  else
    echo  -e " $G $package already installed $N " |&>> Log_file
  fi
-#done
+done
