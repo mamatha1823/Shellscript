@@ -1,9 +1,9 @@
 #!/bin/bash
 user_id=$(id -u)
-mkdir -p /var/log/shell_script
-script_name=$(echo $0 | cut -d "." -f1)
-time=$(date +%y-%m-%d-%H-%M-%s)
-Log_file=/var/log/shell_script/$script_name_$time.log
+#mkdir -p /var/log/shell_script
+# script_name=$(echo $0 | cut -d "." -f1)
+# time=$(date +%y-%m-%d-%H-%M-%s)
+# Log_file=/var/log/shell_script/$script_name_$time.log
 #colours
 
 R="\e[31m]"
